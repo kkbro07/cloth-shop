@@ -1,0 +1,100 @@
+.section__color-wrapper {
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.container {
+  max-width: 1200px; /* Constrain the width of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.grid-container-interactive-cursor {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Adjust columns ratio */
+  gap: 10px; /* Gap between grid items */
+}
+
+.grid-container-interactive-cursor .left-card {
+  grid-column: 1; /* Left column */
+  overflow: hidden; /* Ensure the image doesn't overflow */
+  position: relative;
+  border-radius: 7px;
+}
+
+.grid-container-interactive-cursor .left-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale the image while maintaining aspect ratio */
+}
+
+.grid-container-interactive-cursor .left-card .card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+.grid-container-interactive-cursor .right-cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Create two rows */
+  gap: 10px;
+}
+
+.grid-container-interactive-cursor .right-card {
+  overflow: hidden; /* Ensure the image doesn't overflow */
+  position: relative;
+  border-radius: 7px;
+}
+
+.grid-container-interactive-cursor .right-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale the image while maintaining aspect ratio */
+}
+
+.grid-container-interactive-cursor .right-card .card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+.grid-container-interactive-cursor .left-card img,
+.grid-container-interactive-cursor .left-card h3,
+.grid-container-interactive-cursor .right-cards .right-card img,
+.grid-container-interactive-cursor .right-cards .right-card h3 {
+  transition: transform 0.2s ease-in;
+}
+
+.grid-container-interactive-cursor .left-card:hover img,
+.grid-container-interactive-cursor .left-card:hover h3,
+.grid-container-interactive-cursor .right-cards .right-card:hover img,
+.grid-container-interactive-cursor .right-cards .right-card:hover h3 {
+  transform: scale(1.05);
+}
+
+.grid-container-interactive-cursor .right-card .right-card-mob-image {
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  .grid-container-interactive-cursor {
+    grid-template-columns: 1fr; /* Set to a single column layout */
+    gap: 10px;
+  }
+
+  .grid-container-interactive-cursor .right-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split into two columns */
+    gap: 10px;
+  }
+
+  .grid-container-interactive-cursor .right-card .right-card-mob-image {
+    display: block;
+  }
+
+  .grid-container-interactive-cursor .right-card .right-card-desktop-image {
+    display: none;
+  }
+}

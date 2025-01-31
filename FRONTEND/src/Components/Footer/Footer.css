@@ -1,0 +1,121 @@
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px; /* Added padding for mobile */
+  font-family: Arial, sans-serif;
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__section {
+  flex: 1 1 200px; /* Allow sections to grow and shrink with a minimum width */
+  padding: 0 20px;
+  margin-bottom: 20px; /* Add margin for spacing */
+}
+
+.footer__section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer__section p,
+.footer__section ul,
+.footer__section a {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer__section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__section ul li {
+  margin-bottom: 10px;
+}
+
+.footer__section ul li a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer__section ul li a:hover {
+  color: #fff;
+}
+
+.footer__newsletter-form {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+  margin-top: 15px;
+}
+
+.footer__input {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 10px; /* Add margin for spacing */
+}
+
+.footer__button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f60;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.footer__button:hover {
+  background-color: #e55;
+}
+
+.footer__social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.footer__social-icons a:hover {
+  color: #f60;
+}
+
+.footer__bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+}
+
+.footer__bottom p {
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column; /* Stack sections vertically on mobile */
+    align-items: center; /* Center align the sections */
+  }
+
+  .footer__section {
+    text-align: center; /* Center text on mobile */
+    padding: 0; /* Remove padding */
+  }
+
+  .footer__newsletter-form {
+    flex-direction: row; /* Keep input and button in a row on wider screens */
+  }
+
+  .footer__input {
+    margin-bottom: 0; /* Reset bottom margin for row layout */
+  }
+}

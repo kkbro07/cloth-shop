@@ -1,0 +1,163 @@
+/* FRONTEND/src/Components/Navbar/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo p {
+  color: #171717;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+/* Remove default link styles */
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Active link styles */
+.active-link {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.nav-login-cart button {
+  width: 130px;
+  height: 45px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+}
+
+.nav-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -55px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+}
+
+/* Profile icon styling */
+.profile-icon {
+  width: 24px; /* Adjust the width */
+  height: 24px; /* Adjust the height */
+  cursor: pointer;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+
+  .nav-logo {
+    margin-bottom: 1rem;
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu items by default */
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Show menu items when active */
+  }
+
+  .nav-menu li {
+    font-size: 18px;
+  }
+
+  .nav-login-cart {
+    gap: 20px;
+    margin-top: 1rem;
+  }
+
+  .nav-login-cart button {
+    font-size: 18px; /* Adjust button size for mobile */
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-cart-count {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    margin-top: -30px;
+    margin-left: -50px;
+  }
+}
+
+/* Styles for mobile menu toggle button */
+.nav-menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu-toggle {
+    display: block;
+  }
+}

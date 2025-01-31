@@ -1,0 +1,210 @@
+.productdisplay {
+    display: flex;
+    padding: 0px 10%;
+    gap: 40px;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.productdisplay-left {
+    display: flex;
+    gap: 18px;
+}
+
+.productdisplay-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productdisplay-img-list img {
+    height: 110px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Removed hover effect */
+}
+
+.productdisplay-main-img {
+    height: 500px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Removed hover effect */
+}
+
+.productdisplay-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.productdisplay-right h1 {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.productdisplay-right-stars {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+    color: #000000;
+    font-size: 14px;
+}
+
+.productdisplay-right-prices {
+    display: flex;
+    margin: 25px 0px;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+
+.productdisplay-right-price-old {
+    color: #818181;
+    text-decoration: line-through;
+}
+
+.productdisplay-right-price-new {
+    color: #000000;
+}
+
+.productdisplay-right-description {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.productdisplay-right-size h1 {
+    margin-top: 30px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+
+.productdisplay-right-sizes {
+    display: flex;
+    margin: 20px 0px;
+    gap: 15px;
+}
+
+.productdisplay-right-sizes div {
+    padding: 16px 20px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.productdisplay-right-sizes div:hover {
+    background: #000000;
+    color: white;
+}
+
+.productdisplay-right button {
+    padding: 20px 40px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #000000;
+    margin-bottom: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.productdisplay-right button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.productdisplay-right-category {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+}
+
+.productdisplay-right-category span {
+    font-weight: 600;
+}
+
+/* ----- media query------- */
+
+@media(max-width:1024px) {
+    .productdisplay {
+        padding: 0px 8%;
+    }
+    .productdisplay-img-list {
+        gap: 10px;
+    }
+    .productdisplay-img-list img {
+        height: 90px;
+    }
+    .productdisplay-main-img {
+        height: 400px;
+    }
+}
+
+@media(max-width:900px) {
+    .productdisplay {
+        gap: 20px;
+    }
+    .productdisplay-left {
+        gap: 10px;
+    }
+    .productdisplay-img-list {
+        gap: 10px;
+    }
+    .productdisplay-img-list img {
+        height: 80px;
+    }
+    .productdisplay-main-img {
+        height: 350px;
+    }
+}
+
+@media(max-width:800px) {
+    .productdisplay {
+        flex-wrap: wrap;
+    }
+    .productdisplay-left {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media(max-width:500px) {
+    .productdisplay-right h1 {
+        font-size: 24px;
+    }
+    .productdisplay-right-prices {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+    .productdisplay-right-size h1 {
+        margin-top: 15px;
+    }
+    .productdisplay-right-size h1 {
+        margin: 10px 0;
+    }
+    .productdisplay-right-size div {
+        font-size: 14px;
+    }
+}

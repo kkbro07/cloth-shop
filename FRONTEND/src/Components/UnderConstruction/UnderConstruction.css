@@ -1,0 +1,75 @@
+.under-construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This ensures it takes up the full height */
+    perspective: 1000px; /* Perspective for 3D effect */
+    text-align: center;
+}
+
+.construction-message {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.construction-animation {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+/* Building 3D Effect */
+.building-animation {
+    position: relative;
+    width: 100px;
+    height: 140px;
+    transform-style: preserve-3d;
+    animation: building-move 2s infinite alternate;
+}
+
+.building {
+    width: 100%;
+    height: 100%;
+    background-color: #8b4513; /* Building color */
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #5a3e2b; /* Darker border for depth */
+    transform: rotateY(15deg) translateZ(10px); /* 3D effect */
+}
+
+.roof {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 20px solid #cd5c5c; /* Roof color */
+    transform: rotateY(15deg) translateZ(10px); /* 3D effect */
+}
+
+/* Shirt Animation */
+.shirt-animation {
+    width: 80px;
+    height: 80px;
+    background-color: #ff6347; /* Tomato color */
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) rotateX(-15deg) translateZ(5px); /* 3D effect */
+    border-radius: 10px;
+    animation: shirt-swing 1s infinite;
+}
+
+@keyframes shirt-swing {
+    0% { transform: translateX(-50%) rotateX(-15deg) translateZ(5px); }
+    50% { transform: translateX(-50%) rotateX(-5deg) translateZ(10px); }
+    100% { transform: translateX(-50%) rotateX(-15deg) translateZ(5px); }
+}
+
+@keyframes building-move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

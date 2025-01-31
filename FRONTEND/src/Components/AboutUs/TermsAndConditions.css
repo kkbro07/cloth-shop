@@ -1,0 +1,15 @@
+.terms-conditions {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .terms-conditions h1, h2 {
+    color: #333;
+  }
+  
+  .terms-conditions p, li {
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  

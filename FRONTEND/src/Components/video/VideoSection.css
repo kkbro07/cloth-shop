@@ -1,0 +1,79 @@
+/* Base Styles */
+.section__color-wrapper {
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column; /* Default stacking videos on smaller screens */
+}
+
+/* Flexbox to make videos appear side by side on large screens */
+@media (min-width: 992px) { /* Desktop screens */
+  .container {
+    flex-direction: row; /* Display videos side by side */
+    justify-content: space-between;
+  }
+
+  .liquid {
+    flex: 1; /* Each video takes equal width */
+    margin-bottom: 0; /* Remove bottom margin when videos are side by side */
+  }
+}
+
+.liquid {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px; /* Add space between videos in mobile view */
+}
+
+.liquid a {
+  display: block;
+  width: 100%;
+}
+
+.liquid video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ensure same height for both videos on desktop screens */
+@media (min-width: 992px) { /* Desktop */
+  .liquid video {
+    max-height: 90vh; /* Allow both videos to take most of the viewport height */
+  }
+}
+
+.liquid video:hover {
+  transform: scale(1.02); /* Slight zoom-in effect on hover */
+}
+
+/* Responsive Design */
+
+/* For small devices (tablets and large phones) */
+@media (max-width: 768px) {
+  .liquid video {
+    max-height: 60vh; /* Lower the height limit for smaller screens */
+  }
+}
+
+/* For extra small devices (phones) */
+@media (max-width: 576px) {
+  .liquid video {
+    max-height: 50vh; /* Further lower the height limit for phones */
+  }
+}
+
+/* For ultra small devices (very small screens) */
+@media (max-width: 400px) {
+  .liquid video {
+    max-height: 40vh; /* Keep it accessible on very small screens */
+  }
+}

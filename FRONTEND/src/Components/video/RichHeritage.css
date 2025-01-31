@@ -1,0 +1,47 @@
+/* Base Styles */
+.section {
+    padding: 2rem 0;
+  }
+  
+  .section__color-wrapper {
+    background-color: #fff;
+    padding: 1rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .content-box {
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .heading {
+    color: #1a1a1a;
+    font-family: 'Futura', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  /* Responsive Typography */
+  .heading.h2 {
+    font-size: 2.5rem; /* Desktop font size */
+  }
+  
+  /* For tablets and larger phones */
+  @media (max-width: 768px) {
+    .heading.h2 {
+      font-size: 2rem; /* Slightly smaller font size */
+    }
+  }
+  
+  /* For small phones */
+  @media (max-width: 576px) {
+    .heading.h2 {
+      font-size: 1.75rem; /* Smaller font for small screens */
+    }
+  }
+  

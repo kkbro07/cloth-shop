@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #whatsapp-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  #whatsapp-logo:hover {
+    background-color: #1ebe4e;
+  }
+  
+  #whatsapp-logo img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  #whatsapp-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  
+  #whatsapp-popup.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  #popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #popup-header h3 {
+    margin: 0;
+    color: #25D366;
+    font-size: 18px;
+  }
+  
+  #close-popup {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s ease;
+  }
+  
+  #close-popup:hover {
+    color: #333;
+  }
+  
+  #whatsapp-popup p {
+    margin: 15px 0;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  #whatsapp-popup input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  
+  
+  #whatsapp-popup button {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #whatsapp-popup button:hover {
+    background-color: #1ebe4e;
+  }
+  

@@ -1,0 +1,75 @@
+/* Base styles for Swiper component */
+.swiper-section {
+  background-color: #ffffff;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 120px; /* Adjusted for desktop view */
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  display: block;
+  padding: 2px;
+  width: 120px; /* Adjusted for desktop view */
+  height: 120px; /* Adjusted for desktop view */
+  border-radius: 50%;
+  border: 2px solid #f3e5b6;
+}
+
+.bubble_text {
+  margin: 0;
+  font-size: 16px; /* Adjusted for desktop view */
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 8px;
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 750px) {
+  .swiper-slide {
+    max-width: calc(86px + 5px); /* Adjusts slide width for mobile */
+  }
+  
+  .swiper-slide img {
+    width: 86px;
+    height: 86px;
+  }
+  
+  .bubble_text {
+    font-size: 12px; /* Adjusted for mobile view */
+    margin-top: 5px;
+  }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  .swiper-slide {
+    max-width: calc(72px + 5px); /* Adjusts slide width for smaller screens */
+  }
+  
+  .swiper-slide img {
+    width: 72px;
+    height: 72px;
+  }
+  
+  .bubble_text {
+    font-size: 10px; /* Adjusted for very small screens */
+    margin-top: 3px;
+  }
+}
