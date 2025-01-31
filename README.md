@@ -1,2 +1,2 @@
 ﻿# CLOTHING-SHOP
-
+Created an online clothing shop management system using the MERN stack (MongoDB, Express.js, React.js, Node.js). The system includes features like user authentication, product listing, and order management. Admins can update products, track orders, and manage customer data. The frontend is built with React.js for an interactive experience, while the backend uses Node.js and MongoDB for efficient data handling. The platform ensures a smooth and secure shopping experience for users. 
